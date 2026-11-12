@@ -2,7 +2,7 @@
 
 ## Business problem
 
-Tracks restore drill results and flags workloads that missed RTO or RPO targets.
+A backup is only useful if a restore meets recovery time and data loss objectives. Drill results need to expose missed targets.
 
 ## Reproduce the workflow
 

@@ -4,11 +4,14 @@ Tracks restore drill results and flags workloads that missed RTO or RPO targets.
 
 ```mermaid
 flowchart LR
-    N0["sample_drills.csv"]
-    N1["restore_tracker.py"]
-    N2["evaluate / failures"]
-    N3["Result for operator review"]
-    N0 --> N1 --> N2 --> N3
+    A["Restore duration and data loss metrics"]
+    B["Compare duration to RTO and loss to RPO"]
+    C{"Either target missed?"}
+    D["Emit failed workload"]
+    E["Omit passing workload"]
+    A --> B --> C
+    C -->|Yes| D
+    C -->|No| E
 ```
 
 ## Operational boundaries

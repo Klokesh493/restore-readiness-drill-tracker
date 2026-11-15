@@ -2,6 +2,8 @@
 
 A backup is only useful if a restore meets recovery time and data loss objectives. Drill results need to expose missed targets.
 
+[Skills and verification](docs/ENGINEERING_NOTES.md)
+
 ## What I built
 
 I built a recovery drill checker that compares observed restore duration to RTO and lost data time to RPO. It lists a workload whenever either target is missed.
